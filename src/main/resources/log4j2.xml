@@ -9,9 +9,9 @@
         </File>
     </Appenders>
     <Loggers>
-        <!-- Trace/debug/info messages from the Couchbase SDK's repackaged Netty
+        <!-- Trace/debug/ERROR messages from the Couchbase SDK's repackaged Netty
              are of little interest, unless you're debugging a network issue. -->
-        <Logger name="com.couchbase.client.core.deps.io.netty" level="INFO"/>
+        <Logger name="com.couchbase.client.core.deps.io.netty" level="ERROR"/>
 
         <!-- Uncomment if using the 'io.captureTraffic' client setting. -->
         <!-- <Logger name="com.couchbase.io" level="trace"/> -->
@@ -19,11 +19,11 @@
         <!-- Most messages from the Couchbase SDK are logged under
              this prefix. Change the level to "debug" to see more
              details about SDK activity, or "warn" to see less.
-             In production environments, we recommend "info". -->
-        <Logger name="com.couchbase" level="INFO"/>
+             In production environments, we recommend "ERROR". -->
+        <Logger name="com.couchbase" level="ERROR"/>
 
         <!-- The default level for everything else. -->
-        <Root level="INFO">
+        <Root level="ERROR">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="MAIN"/>
         </Root>
